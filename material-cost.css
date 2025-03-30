@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #2C3E50;
+    color: #FFF;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ECF0F1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #F5F5F5;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+th {
+    background-color: #4A6274;
+    color: #FFF;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #34495E;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2C3E50;
+}
+
+input[readonly] {
+    background-color: #e9ecef;
+}
+
+input {
+    width: 100px;
+}
+
+.legends {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.legend-item {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.green { background-color: green; }
+.yellow { background-color: yellow; }
+.orange { background-color: orange; }
+.gray { background-color: lightgray; }
+
+.button-container {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+#correctionTableSection {
+    display: none;  /* Hidden by default */
+}
+
+td.edited-0-3 {
+    background-color: green;
+}
+
+td.edited-3-6 {
+    background-color: yellow;
+}
+
+td.edited-6-9 {
+    background-color: orange;
+}
+
+td.edited-9 {
+    background-color: lightgray;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFQ Dashboard</title>
+    <link rel="stylesheet" href="rfq_dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="rfq_dashboard.js" defer></script>
+</head>
+<body>
+
+<!-- Sidebar Navigation -->
+<div class="sidebar">
+    <ul>
+        <li><a href="#" onclick="showPage('dashboard')" class="active">RFQ Dashboard</a></li>
+        <li><a href="#" onclick="showPage('rfqList')">RFQ List</a></li>
+        <li><a href="#" onclick="showPage('rfqDetails')">RFQ Details</a></li>
+        <li><a href="#" onclick="showPage('rfqDetailList')">RFQ Detail List</a></li>
+    </ul>
+</div>
+
+<!-- Main Content Area -->
+<div class="main-content">
+
+    <!-- RFQ Dashboard Section -->
+    <div id="dashboard" class="content-page active">
+        <h2>RFQ Dashboard</h2>
+        <label for="yearSelector">Select Year:</label>
+        <select id="yearSelector"></select>
+
+        <!-- Graph Layout (Updated to 2x2 Grid) -->
+        <div class="rfq-dashboard">
+            <div class="chart-container">
+                <h3 class="chart-title">RFQ Count</h3>
+                <canvas id="rfqCountChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3 class="chart-title">Submitted VS Received</h3>
+                <canvas id="submittedReceivedChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3 class="chart-title">Count of RFQs Assigned To</h3>
+                <canvas id="assignedToChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3 class="chart-title">Count of RFQs Closed/Month</h3>
+                <canvas id="closedPerMonthChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- RFQ List Section -->
+    <div id="rfqList" class="content-page">
+        <h2>RFQ List</h2>
+        <div class="action-buttons">
+            <button onclick="newRFQ()">New</button>
+            <button onclick="saveRFQ()">Save</button>
+            <button onclick="editRFQ()">Edit</button>
+            <button onclick="cancelEdit()">Cancel Edit</button>
+            <button onclick="deleteRFQ()">Delete</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search RFQ No" id="searchRFQ">
+            <button onclick="searchRFQ()">Search</button>
+            <button onclick="returnHome()">Return to Dashboard</button>
+        </div>
+
+        <!-- RFQ Table -->
+        <table id="rfqTable">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>RFQ NO</th>
+                    <th>REV</th>
+                    <th>ENQUIRY DETAILS</th>
+                    <th>CUSTOMER NAME</th>
+                    <th>RCVD DATE</th>
+                    <th>ACKNOWLEDGED DATE</th>
+                    <th>ASSIGNED TO</th>
+                    <th>RFQ STATUS</th>
+                    <th>DATE COMPLETED</th>
+                    <th>SUBMITTAL STATUS</th>
+                    <th>SUBMITTED DATE</th>
+                    <th>QUOTE VALUE</th>
+                    <th>COMPLETED/ TOTAL #OF LINES</th>
+                    <th>ORDER RECEIVED DATE</th>
+                    <th>ORDER VALUE</th>
+                    <th>REMARKS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- RFQ Details Section -->
+    <div id="rfqDetails" class="content-page">
+        <h2>RFQ Details</h2>
+        <label>RFQ No:</label> <span id="rfqNoDetail">RFQ001</span>
+        <div class="buttons">
+            <button onclick="returnHome()">Return</button>
+            <button onclick="saveRFQDetails()">Save</button>
+            <button onclick="editRFQDetails()">Edit</button>
+            <button onclick="cancelEdit()">Cancel Edit</button>
+        </div>
+
+        <table id="rfqDetailsTable">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>SL No</th>
+                    <th>Item No</th>
+                    <th>Description</th>
+                    <th>Rev</th>
+                    <th>Quantity</th>
+                    <th>Unit Cost</th>
+                    <th>Markup %</th>
+                    <th>Unit Price</th>
+                    <th>Extended Price</th>
+                    <th>Remarks</th>
+                    <th>Lead Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic rows -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- RFQ Detail List Section -->
+    <div id="rfqDetailList" class="content-page">
+        <h2>RFQ Detail List</h2>
+        <table id="rfqDetailTable">
+            <thead>
+                <tr>
+                    <th>RFQ No</th>
+                    <th>REV</th>
+                    <th>Customer Name</th>
+                    <th>Received Date</th>
+                    <th>Assigned To</th>
+                    <th>RFQ Status</th>
+                    <th>Submitted Date</th>
+                    <th>Quote Value</th>
+                    <th>SL No</th>
+                    <th>Item No</th>
+                    <th>Description</th>
+                    <th>Rev</th>
+                    <th>Quantity</th>
+                    <th>UOM</th>
+                    <th>Item Type</th>
+                    <th>Status</th>
+                    <th>Unit Cost</th>
+                    <th>Markup</th>
+                    <th>Unit Price</th>
+                    <th>Extended Price</th>
+                    <th>Remarks</th>
+                    <th>Lead Time</th>
+                    <th>Order Received Date</th>
+                    <th>Order Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic rows -->
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
