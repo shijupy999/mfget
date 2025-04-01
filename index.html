@@ -1,89 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCalcs - Oil & Gas Manufacturing Cost Estimation</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MCalcs - Oil & Gas Manufacturing Cost Estimation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="logo-name">
-            <img src="images/logo.png" alt="Logo">
-            <h1>MCalcs</h1>
+  <header>
+    <div class="logo-name">
+      <img src="images/logo.png" alt="Logo" />
+      <h1>MCalcs</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Calcs</a>
+          <div class="dropdown-content">
+            <a href="material-weight-calculator.html">Material Weight Calculator</a>
+            <a href="material-cost-calculator.html">Material Cost Calculator</a>
+            <a href="rfq_dashboard.html">RFQ Master</a>
+            <a href="#">Drill Bit (SBD) Cost Calculator</a>
+            <a href="#">Coating or Plating Cost Calculator</a>
+            <a href="machining_calculator.html">Machining Calculator</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#">Tools</a>
+          <div class="dropdown-content">
+            <a href="material-cost-correction.html">Material Cost Corrections</a>
+            <a href="#">Machining Cost Corrections</a>
+            <a href="#">Plating or Coating Cost Corrections</a>
+          </div>
+        </li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="middle-section">
+      <div class="main-image">
+        <img src="images/Homeimage.png" alt="Calculation Image" />
+      </div>
+
+      <div class="text-section">
+        <p>
+          MCalcs is designed for calculating the manufacturing cost of a part, including material, machining, coating, and assembly. The site offers great flexibility to adjust local price variations, ensuring the accuracy of your calculations.
+        </p>
+      </div>
+
+      <div class="transparent-images">
+        <div class="section">
+          <h3>Drill Bit</h3>
+          <img src="images/drillbit_image_150x150.png" alt="Drill Bit" />
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li class="dropdown">
-                    <a href="#">Calcs</a>
-                    <div class="dropdown-content">
-                        <a href="material-weight-calculator.html">Material Weight Calculator</a>
-                        <a href="material-cost-calculator.html">Material Cost Calculator</a>
-                        <a href="rfq_dashboard.html">RFQ Master</a>
-                        <a href="#">Drill Bit (SBD) Cost Calculator</a>
-                        <a href="#">Coating or Plating Cost Calculator</a>
-                        <a href="machining_calculator.html">Machining Calculator</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Tools</a>
-                    <div class="dropdown-content">
-                        <a href="material-cost-correction.html">Material Cost Corrections</a>
-                        <a href="#">Machining Cost Corrections</a>
-                        <a href="#">Plating or Coating Cost Corrections</a>
-                    </div>
-                </li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div class="middle-section">
-            <div class="main-image">
-                <img src="images/Homeimage.png" alt="Calculation Image">
-            </div>
-
-            <div class="text-section">
-                <p>MCalcs is designed for calculating the manufacturing cost of a part, including material, machining, coating, and assembly. The site offers great flexibility to adjust local price variations, ensuring the accuracy of your calculations.</p>
-            </div>
-
-            <div class="transparent-images">
-                <div class="section">
-                    <h3>Drill Bit</h3>
-                    <img src="images/drillbit_image_150x150.png" alt="Drill Bit">
-                </div>
-                <div class="section">
-                    <h3>Motors</h3>
-                    <img src="https://via.placeholder.com/150.png" alt="Motors">
-                </div>
-                <div class="section">
-                    <h3>Jars</h3>
-                    <img src="https://via.placeholder.com/150.png" alt="Jars">
-                </div>
-                <div class="section">
-                    <h3>Fishing Tools</h3>
-                    <img src="https://via.placeholder.com/150.png" alt="Fishing Tools">
-                </div>
-                <div class="section">
-                    <h3>Liner Hanger & Packers</h3>
-                    <img src="https://via.placeholder.com/150.png" alt="Liner Hanger & Packers">
-                </div>
-                <div class="section">
-                    <h3>Safety Valves</h3>
-                    <img src="https://via.placeholder.com/150.png" alt="Safety Valves">
-                </div>
-            </div>
-
-            <!-- New section for Export & Import buttons -->
-            <div id="export-import-buttons"></div>
+        <div class="section">
+          <h3>Motors</h3>
+          <img src="https://via.placeholder.com/150.png" alt="Motors" />
         </div>
-    </main>
+        <div class="section">
+          <h3>Jars</h3>
+          <img src="https://via.placeholder.com/150.png" alt="Jars" />
+        </div>
+        <div class="section">
+          <h3>Fishing Tools</h3>
+          <img src="https://via.placeholder.com/150.png" alt="Fishing Tools" />
+        </div>
+        <div class="section">
+          <h3>Liner Hanger & Packers</h3>
+          <img src="https://via.placeholder.com/150.png" alt="Liner Hanger & Packers" />
+        </div>
+        <div class="section">
+          <h3>Safety Valves</h3>
+          <img src="https://via.placeholder.com/150.png" alt="Safety Valves" />
+        </div>
+      </div>
 
-    <footer>
-        <p>© 2024 MCalcs. All rights reserved.</p>
-    </footer>
+      <!-- New section for Export & Import buttons -->
+      <div id="export-import-buttons"></div>
+
+      <!-- ✅ NEW: Simple enquiry form -->
+      <section class="form-section">
+        <h2>Submit Enquiry</h2>
+        <form id="enquiryForm">
+          <label for="toolType">Tool Type:</label>
+          <input type="text" id="toolType" name="toolType" required />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 MCalcs. All rights reserved.</p>
+  </footer>
 </body>
 </html>
